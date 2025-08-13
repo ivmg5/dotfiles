@@ -1,0 +1,31 @@
+cpu: 4
+disk: 100
+memory: 4
+arch: aarch64
+runtime: docker
+hostname: colima
+kubernetes:
+  enabled: true
+  version: v1.31.2+k3s1
+  k3sArgs:
+    - --disable=traefik
+autoActivate: true
+network:
+  address: true
+  dns: []
+  dnsHosts: {}
+  hostAddresses: false
+forwardAgent: false
+docker: {}
+vmType: vz
+rosetta: false
+nestedVirtualization: false
+mountType: sshfs
+mountInotify: true
+cpuType: ""
+provision: []
+sshConfig: true
+sshPort: 0
+mounts: []
+diskImage: ""
+env: {}
