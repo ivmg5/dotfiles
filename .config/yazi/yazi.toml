@@ -1,0 +1,21 @@
+[mgr]
+ratio = [1, 2, 5]
+sort_by = "extension"
+sort_sensitive = true
+show_hidden = true
+
+[preview]
+max_width = 4096
+
+[input]
+cursor_blink = true
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"
