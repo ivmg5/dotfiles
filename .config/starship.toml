@@ -1,0 +1,316 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = false
+
+format = """[](red)\
+$battery\
+$sudo\
+$os\
+$hostname\
+$username\
+[](bg:peach fg:red)\
+$directory\
+[](bg:yellow fg:peach)\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+[](bg:green fg:yellow)\
+$c\
+$cpp\
+$rust\
+$golang\
+$gradle\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$python\
+$bun\
+$cmake\
+$dart\
+$deno\
+$lua\
+$rlang\
+$ruby\
+$swift\
+[](bg:sapphire fg:green)\
+$aws\
+$gcloud\
+$docker_context\
+$conda\
+$container\
+$direnv\
+$helm\
+$kubernetes\
+$terraform\
+$cmd_duration\
+$jobs\
+[ ](fg:lavender)\
+$line_break\
+$character
+"""
+
+palette = 'catppuccin_mocha'
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[aws]
+format = '[[ $symbol($profile )($region )($duration )](fg:crust bg:sapphire)]($style)'
+symbol = "  "
+style = "fg:crust bg:sapphire"
+expiration_symbol = 'X'
+
+[battery]
+format = '[[ $symbol$percentage ](fg:crust bg:red)]($style)'
+
+[[battery.display]]
+style = "fg:crust bg:red"
+
+[bun]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[c]
+format = '[[ $symbol($version(-$name) )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[cpp]
+format = '[[ $symbol($version(-$name) )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+disabled = false
+
+[character]
+success_symbol = '[❯](bold fg:green)'
+error_symbol = '[❯](bold fg:red)'
+vimcmd_symbol = '[❮](bold fg:green)'
+vimcmd_replace_one_symbol = '[❮](bold fg:lavender)'
+vimcmd_replace_symbol = '[❮](bold fg:lavender)'
+vimcmd_visual_symbol = '[❮](bold fg:yellow)'
+
+[cmake]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[cmd_duration]
+format = '[[ took $duration ](fg:crust bg:lavender)]($style)'
+style = "fg:crust bg:lavender"
+show_notifications = true
+
+[conda]
+format = '[[ $symbol$environment ](fg:crust bg:sapphire)]($style)'
+symbol = " "
+style = "fg:crust bg:sapphire"
+
+[container]
+format = '[[ $symbol$name ](fg:crust bg:sapphire)]($style)'
+symbol = ' '
+style = "fg:crust bg:sapphire"
+
+[dart]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[deno]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[directory]
+format = '[[ $path ](fg:crust bg:peach)]($style)[[$read_only](fg:crust bg:peach)]($read_only_style)'
+style = "fg:crust bg:peach"
+read_only = " 󰌾"
+read_only_style = 'fg:crust bg:peach'
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[direnv]
+format = '[[ $symbol$loaded/$allowed ](fg:crust bg:sapphire)]($style)'
+symbol = 'direnv '
+style = "fg:crust bg:sapphire"
+disabled = false
+
+[docker_context]
+format = '[[ $symbol$context ](fg:crust bg:sapphire)]($style)'
+symbol = " "
+style = "fg:crust bg:sapphire"
+
+[gcloud]
+format = '[[ $symbol$account (@$domain )($region )](fg:crust bg:sapphire)]($style)'
+symbol = " "
+style = "fg:crust bg:sapphire"
+
+[git_branch]
+format = '[[ $symbol$branch(:$remote_branch )](fg:crust bg:yellow)]($style)'
+symbol = " "
+style = "fg:crust bg:yellow"
+
+[git_commit]
+format = '[[ $hash$tag ](fg:crust bg:yellow)]($style)'
+tag_symbol = '  '
+style = "fg:crust bg:yellow"
+
+[git_state]
+format = '[[ $state ($progress_current/$progress_total )](fg:crust bg:yellow)]($style)'
+style = "fg:crust bg:yellow"
+
+[git_metrics]
+format = '([[ +$added ](fg:crust bg:yellow)]($added_style))([[-$deleted ](fg:crust bg:yellow)]($deleted_style))'
+added_style = 'fg:crust bg:yellow'
+deleted_style = 'fg:crust bg:yellow'
+disabled = false
+
+[git_status]
+format = '([[ $all_status$ahead_behind ](fg:crust bg:yellow)]($style))'
+style = "fg:crust bg:yellow"
+
+[golang]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+not_capable_style = 'fg:crust bg:green'
+
+[gradle]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[helm]
+format = '[[ $symbol($version )](fg:crust bg:sapphire)]($style)'
+symbol = '⎈ '
+style = "fg:crust bg:sapphire"
+
+[hostname]
+format = '[[ $ssh_symbol$hostname ](fg:crust bg:red)]($style)'
+ssh_symbol = " "
+style = 'fg:crust bg:red'
+
+[java]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[jobs]
+format = '[[ $symbol$number ](fg:crust bg:lavender)]($style)'
+symbol = ' '
+style = "fg:crust bg:lavender"
+
+[kotlin]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[kubernetes]
+format = '[[ $symbol$context ($namespace )](fg:crust bg:sapphire)]($style)'
+symbol = '⎈ '
+style = "fg:crust bg:sapphire"
+disabled = false
+detect_files = ['k8s', 'deployment.yaml']
+detect_folders = ['manifests', '.k8s']
+
+[line_break]
+disabled = false
+
+[lua]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[nodejs]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+not_capable_style = "fg:crust bg:green"
+
+[os]
+format = '[[ $symbol ](fg:crust bg:red)]($style)'
+style = "fg:crust bg:red"
+disabled = false
+
+[os.symbols]
+Macos = ""
+
+[php]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[python]
+format = '[[ $symbol$pyenv_prefix ($version )($virtualenv )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+pyenv_version_name = true
+
+[rlang]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = "󰟔 "
+style = "fg:crust bg:green"
+
+[ruby]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[rust]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = "󱘗 "
+style = "fg:crust bg:green"
+
+[sudo]
+format = '[[ $symbol ](fg:crust bg:red)]($style)'
+symbol = " "
+style = "fg:crust bg:red"
+disabled = false
+
+[swift]
+format = '[[ $symbol($version )](fg:crust bg:green)]($style)'
+symbol = " "
+style = "fg:crust bg:green"
+
+[terraform]
+format = '[[ $symbol$workspace ](fg:crust bg:sapphire)]($style)'
+symbol = " "
+style = "fg:crust bg:sapphire"
+
+[username]
+format = '[[ $user ](fg:crust bg:red)]($style)'
+style_root = "fg:crust bg:red"
+style_user = "fg:crust bg:red"
+show_always = true
+
