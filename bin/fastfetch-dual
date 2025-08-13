@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+clear
+fastfetch -c ~/.config/fastfetch/left.jsonc
+sleep 0.1
+print -n "\e[1;70H"
+fastfetch -c ~/.config/fastfetch/right.jsonc

@@ -1,0 +1,164 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "builtin",
+    "source": "Apple",
+    "padding": {
+      "left": 27,
+      "right": 70,
+      "top": 1,
+    },
+    "position": "left",
+    "printRemaining": false,
+    "preserveAspectRatio": false,
+    "recache": false,
+    "color": {
+      "1": "red",
+      "2": "yellow",
+      "3": "green",
+      "4": "cyan",
+      "5": "blue",
+      "6": "magenta",
+      "7": "white",
+    },
+  },
+  "display": {
+    "separator": " => ",
+    "color": {
+      "keys": "yellow",
+      "output": "white",
+      "separator": "cyan",
+      "title": "green",
+    },
+    "key": {
+      "type": "both",
+      "width": 0,
+      "paddingLeft": 2,
+    },
+    "size": {
+      "binaryPrefix": "si",
+      "maxPrefix": "YB",
+      "ndigits": 2,
+    },
+    "temp": {
+      "unit": "C",
+      "ndigits": 1,
+      "color": {
+        "green": "green",
+        "yellow": "yellow",
+        "red": "red",
+      },
+    },
+    "bar": {
+      "charElapsed": "■",
+      "charTotal": "-",
+      "borderLeft": "[ ",
+      "borderRight": " ]",
+      "width": 10,
+    },
+    "percent": {
+      "type": 3,
+      "ndigits": 0,
+      "color": {
+        "green": "green",
+        "yellow": "yellow",
+        "red": "red",
+      },
+    },
+    "freq": {
+      "ndigits": 2,
+    },
+  },
+  "modules": [
+    "break",
+    "break",
+    {
+      "type": "custom",
+      "format": "┌───────────────── 󰖟  Network ──────────────────┐",
+    },
+    {
+      "type": "wifi",
+      "key": "Wi-Fi",
+      "format": "{status} | {ssid}",
+    },
+    {
+      "type": "localip",
+      "key": "Local IP",
+      "showIpv4": true,
+      "showPrefixLen": true,
+      "defaultRouteOnly": true,
+      "format": "{ipv4}",
+    },
+    {
+      "type": "publicip",
+      "key": "Public IP",
+      "timeout": 1000,
+      "format": "{ip}",
+    },
+    {
+      "type": "custom",
+      "format": "└───────────────────────────────────────────────┘",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "┌───────────────── 󰚀  Environment ──────────────┐",
+    },
+    {
+      "type": "editor",
+      "key": "Editor",
+      "format": "{name} {version}",
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel",
+      "format": "{sysname} {release}",
+    },
+    {
+      "type": "terminal",
+      "key": "Terminal",
+      "format": "{pretty-name} {version}",
+    },
+    {
+      "type": "shell",
+      "key": "Shell",
+      "format": "{pretty-name} {version}",
+    },
+    {
+      "type": "custom",
+      "format": "└───────────────────────────────────────────────┘",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "┌────────────── 󰋊  Storage and Memory ──────────┐",
+    },
+    {
+      "type": "disk",
+      "key": "Disk",
+      "showExternal": true,
+      "showHidden": false,
+      "showSubvolumes": true,
+      "showReadOnly": true,
+      "showUnknown": true,
+      "format": "{size-used} / {size-total} {size-percentage-bar}",
+    },
+    {
+      "type": "memory",
+      "key": "Memory",
+      "keyIcon": "\uF2DB",
+      "format": "{used} / {total}   {percentage-bar}",
+    },
+    {
+      "type": "swap",
+      "key": "Swap",
+      "format": "{used} / {total}   {percentage-bar}",
+    },
+    {
+      "type": "custom",
+      "format": "└───────────────────────────────────────────────┘",
+    },
+    "break",
+    "break",
+  ],
+}
