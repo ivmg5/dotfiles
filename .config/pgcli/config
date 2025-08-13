@@ -1,0 +1,73 @@
+# vi: ft=dosini
+[main]
+smart_completion = True
+wider_completion_menu = False
+always_use_single_connection = False
+multi_line = True
+multi_line_mode = psql
+destructive_warning = drop, shutdown, delete, truncate, alter, update, unconditional_update
+destructive_warning_restarts_connection = False
+destructive_statements_require_transaction = False
+expand = False
+auto_expand = False
+auto_retry_closed_connection = True
+generate_aliases = False
+alias_map_file =
+log_file = default
+keyword_casing = upper
+casing_file = default
+generate_casing_file = False
+case_column_headers = True
+history_file = default
+log_level = INFO
+asterisk_column_order = table_order
+qualify_columns = if_more_than_one_table
+search_path_filter = False
+pager = less
+timing = False
+show_bottom_toolbar = True
+table_format = fancy_grid
+syntax_style = monokai
+vi = False
+on_error = STOP
+row_limit = 1000
+max_field_width = 500
+less_chatty = True
+verbose_errors = False
+prompt = '\x1b[1;36m\u\x1b[0m@\x1b[1;34m\h\x1b[0m:\x1b[1;33m\d\x1b[0m → '
+min_num_menu_lines = 4
+multiline_continuation_char = '… '
+null_string = '<null>'
+enable_pager = False
+keyring = True
+use_local_timezone = True
+[colors]
+completion-menu.completion.current = 'bg:#11111B #B2BEFF'
+completion-menu.completion = 'bg:#11111B #F9DFDB'
+completion-menu.meta.completion.current = 'bg:#B2BEFF #11111B'
+completion-menu.meta.completion = 'bg:#11111B #F9DFDB'
+completion-menu.multi-column-meta = 'bg:#11111B #F9DFDB'
+scrollbar.arrow = 'bg:#11111B'
+scrollbar = 'bg:#11111B'
+search = '#ffffff bg:#4444aa'
+search.current = '#ffffff bg:#44aa44'
+bottom-toolbar = 'bg:#11111B #cdd6f4'
+bottom-toolbar.off = 'bg:#11111B #7f849c'
+bottom-toolbar.on = 'bg:#11111B #f9e2af'
+search-toolbar = 'noinherit bold'
+search-toolbar.text = 'nobold'
+system-toolbar = 'noinherit bold'
+arg-toolbar = 'noinherit bold'
+arg-toolbar.text = 'nobold'
+bottom-toolbar.transaction.valid = 'bg:#11111B #a6e3a1 bold'
+bottom-toolbar.transaction.failed = 'bg:#11111B #f38ba8 bold'
+output.header = "#00ff5f bold"
+output.odd-row = ""
+output.even-row = ""
+output.null = "#808080"
+[named queries]
+[alias_dsn]
+[data_formats]
+decimal = "d"
+float = "g"
+[column_date_formats]
