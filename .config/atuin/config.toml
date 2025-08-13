@@ -1,0 +1,32 @@
+dialect = "uk"
+
+style = "full"
+
+inline_height = 0
+
+show_help = false
+
+store_failed = false
+
+secrets_filter = false
+
+enter_accept = true
+
+[stats]
+
+[keys]
+
+[sync]
+records = true
+
+[dotfiles]
+enabled = true
+
+[preview]
+
+[daemon]
+
+[theme]
+name = "catppuccin-mocha-blue"
+
+[search]
