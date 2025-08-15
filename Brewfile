@@ -184,6 +184,8 @@ cask "font-meslo-lg-nerd-font"
 cask "font-noto-color-emoji"
 cask "font-noto-sans-mono-cjk-sc"
 cask "font-symbols-only-nerd-font"
+# Web browser
+cask "google-chrome"
 # Oracle SQLcl is the modern command-line interface for the Oracle Database
 cask "sqlcl"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
