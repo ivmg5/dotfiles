@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+if [ "$1" = "-v" ] || [ "$1" = "--version" ]; then
+  printf "Lua 5.1.0\n"
+  exit 0
+fi
+exec /opt/homebrew/opt/luajit/bin/luajit "$@"
