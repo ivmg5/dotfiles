@@ -1,4 +1,0 @@
-argparse
-jsregexp
-luacheck
-luafilesystem
