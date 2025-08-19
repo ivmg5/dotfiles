@@ -1,5 +1,0 @@
-corepack
-jest
-neovim
-npm
-prettier
