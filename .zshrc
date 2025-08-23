@@ -413,7 +413,6 @@ alias eza='eza -T -L=10 -F --colour=always --colour-scale=all --color-scale-mode
 alias batgrep='batgrep --smart-case --context=4 --color --paging=never --no-ignore --hidden --fixed-strings'
 alias fd='fd --hidden --no-ignore --follow --color=always --list-details'
 alias dust='dust -C -r --skip-total'
-alias gping='gping -c blue --clear'
 alias duf='duf --all --sort usage'
 alias pip='python -m pip'
 alias yazi='y'
