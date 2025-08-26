@@ -83,7 +83,7 @@
     {
       "type": "wifi",
       "key": "Wi-Fi",
-      "format": "{status} | {ssid}",
+      "format": "{status}",
     },
     {
       "type": "localip",
